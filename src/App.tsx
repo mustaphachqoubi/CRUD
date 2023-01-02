@@ -1,7 +1,17 @@
-function App() {
+import {Route, Routes} from 'react-router-dom'
+import Dashboard from './pages/Dashboard'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
 
+function App() {
   return (
-    <h1 className='underline text-xl font-bold bg-red-500 text-center'>test</h1>
+    <div>
+      <Routes>
+        <Route path='/dashboard' element={<Dashboard />}/>
+        <Route path='/login' element={<Login />}/>
+        <Route path='/signup' element={<Signup />}/>
+      </Routes>
+    </div>
   )
 }
 
