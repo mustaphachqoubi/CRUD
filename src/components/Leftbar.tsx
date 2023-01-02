@@ -6,14 +6,30 @@ import { TbSchool } from "react-icons/tb";
 import { MdOutlinePayment } from "react-icons/md";
 import { HiOutlineDocumentReport } from "react-icons/hi";
 import { FiSettings } from "react-icons/fi";
+import { close, open } from "../redux/closeNavbar";
+import { useDispatch, useSelector } from "react-redux";
 
 const Leftbar = () => {
+  const {close_nav} = useSelector(state => state.closer);
+  const dispatch = useDispatch();
   return (
-    <div className="bg-orange-100 w-60 h-screen flex flex-col justify-between p-6">
+    <div
+      className={`${close_nav} bg-orange-100 w-60 h-screen flex-col justify-between p-6 relative`}
+    >
+      <div
+      onClick={() => {
+        dispatch(close())
+      }}
+      className="absolute flex justify-center items-center md:hidden hover:bg-orange-600 bg-orange-500 text-white p-2 rounded-full text-center w-10 top-5 right-5 cursor-pointer">
+        x
+      </div>
       <div className="space-y-8">
         <div className="flex font-bold gap-2 cursor-pointer">
-          <div className="bg-orange-300 w-1"></div>
-          <h1 className="text-sm md:text-[1em]">CRUD OPERATIONS</h1>
+          <div className="bg-orange-300 w-1" />
+          <h1 className="hidden md:flex text-sm md:text-[1em]">
+            CRUD OPERATIONS
+          </h1>
+          <h1 className="flex md:hidden text-md md:text-[1em]">CRUD</h1>
         </div>
 
         <div className="flex flex-col justify-center items-center gap-2 cursor-pointer">
