@@ -10,17 +10,18 @@ import { close, open } from "../redux/closeNavbar";
 import { useDispatch, useSelector } from "react-redux";
 
 const Leftbar = () => {
-  const {close_nav} = useSelector(state => state.closer);
+  const { close_nav } = useSelector((state) => state.closer);
   const dispatch = useDispatch();
   return (
     <div
       className={`${close_nav} bg-orange-100 w-60 h-screen flex-col justify-between p-6 relative`}
     >
       <div
-      onClick={() => {
-        dispatch(close())
-      }}
-      className="absolute flex justify-center items-center md:hidden hover:bg-orange-600 bg-orange-500 text-white p-2 rounded-full text-center w-10 top-5 right-5 cursor-pointer">
+        onClick={() => {
+          dispatch(close());
+        }}
+        className="absolute flex justify-center items-center md:hidden hover:bg-orange-600 bg-orange-500 text-white p-2 rounded-full text-center w-10 top-5 right-5 cursor-pointer"
+      >
         x
       </div>
       <div className="space-y-8">
@@ -44,42 +45,54 @@ const Leftbar = () => {
           <h4 className="text-orange-400 text-xs">Admin</h4>
         </div>
 
-        <div className="flex flex-col gap-4 relative">
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md bg-orange-400">
-            <div className="text-lg md:flex absolute left-5">
+        <div className="flex flex-col gap-2 relative">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md bg-orange-400">
+            <div className="text-lg">
               <AiOutlineHome />
             </div>
-            <h3>Home</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Home</h3>
+            </div>
           </div>
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
-            <div className="text-lg md:flex absolute left-5">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
+            <div className="text-lg md:flex">
               <BsBookmark />
             </div>
-            <h3>Course</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Course</h3>
+            </div>
           </div>
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
-            <div className="text-lg md:flex absolute left-5">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
+            <div className="text-lg md:flex">
               <TbSchool />
             </div>
-            <h3>Students</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Students</h3>
+            </div>
           </div>
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
-            <div className="text-lg md:flex absolute left-5">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
+            <div className="text-lg md:flex">
               <MdOutlinePayment />
             </div>
-            <h3>Payment</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Payment</h3>
+            </div>
           </div>
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
-            <div className="text-lg md:flex absolute left-5">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
+            <div className="text-lg md:flex">
               <HiOutlineDocumentReport />
             </div>
-            <h3>Report</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Report</h3>
+            </div>
           </div>
-          <div className="flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
-            <div className="text-lg md:flex absolute left-5">
+          <div className="px-20 flex cursor-pointer justify-center items-center gap-4 text-black p-2 rounded-md hover:bg-orange-200">
+            <div className="text-lg md:flex">
               <FiSettings />
             </div>
-            <h3>Settings</h3>
+            <div className="flex justify-left items-center w-10">
+              <h3>Settings</h3>
+            </div>
           </div>
         </div>
       </div>
