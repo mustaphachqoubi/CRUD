@@ -5,12 +5,8 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    // colors: {
-    //   primary: '#FEAF00',
-    //   halfPrimary: '#F8D442',
-    //   secondary: '#F2EAE1'
-    // },
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }

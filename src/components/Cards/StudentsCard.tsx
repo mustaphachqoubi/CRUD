@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
+import Card from "../Card";
+import {TbSchool} from 'react-icons/tb'
 
 const StudentsCard = () => {
   return (
-    <div className='bg-[#74C1ED]'>StudentsCard</div>
+    <Card color={'#74C1ED'} icon={<TbSchool />} name={'Students'} number={243} />
   )
-}
+};
 
-export default StudentsCard
+export default StudentsCard;
