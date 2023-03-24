@@ -1,12 +1,12 @@
-import React from 'react'
-import {Cards} from '../components'
+import React from "react";
+import { Cards } from "../components";
 
 const Home = () => {
   return (
-    <>
-    <Cards />
-    </>
-  )
-}
+    <div className="bg-[#FDFDFD]">
+      <Cards />
+    </div>
+  );
+};
 
-export default Home
+export default Home;
