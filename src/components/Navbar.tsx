@@ -5,7 +5,7 @@ import { IoIosNotificationsOutline } from "react-icons/io";
 const Navbar = () => {
   return (
     <div className="p-4 bg-red-500 flex justify-between  items-center bg-white text-slate-400">
-      <div className="text-xl cursor-pointer hover:text-slate-500">
+      <div className="text-xl cursor-pointer hover:text-slate-500 z-50">
         <AiOutlineLeftCircle />
       </div>
 
